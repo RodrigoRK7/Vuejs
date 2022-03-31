@@ -1,0 +1,68 @@
+<template>
+    <div class="container">
+        <input type="checkbox" id="btn-mas">
+        <div class = "redes">
+            <a href="https://es-la.facebook.com/MascotasYAccesoriosMx/">Facebook</a>
+            <a href="https://www.instagram.com/yoamoalasmascotas/?hl=es">Instagram</a>
+            <a href="https://www.youtube.com/watch?v=E0079PAMfvc">YouTube</a>
+            <a href="https://twitter.com/mascotas_online?lang=es">Twitter</a>
+        </div>
+        <div class="btn-mas">
+            <label for="btn-mas" class="icon-mas2"> +</label>
+        </div>
+    </div>
+</template>
+
+<script>
+export default {
+    
+}
+</script>
+
+<style scoped>
+#btn-mas{
+    display: none;
+}
+.container{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+.redes a, .icon-mas2{
+    display: block;
+    text-decoration: none;
+    background: #cc2b2b;
+    color: #fff;
+    width: 55px;
+    height: 50px;
+    line-height: 55px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.4);
+    transition: all 500ms ease;
+    font-size: 10px;
+}
+.redes a:hover{
+    background: #fff;
+    color: #cc2b2b;
+}
+.redes a{
+    margin-bottom: -15px;
+    opacity: 0;
+    visibility: hidden;
+}
+#btn-mas:checked~ .redes a{
+    margin-bottom: 10px;
+    opacity: 1;
+    visibility: visible;
+}
+.icon-mas2{
+    cursor: pointer;
+    background: #f44141;
+    font-size: 23px;
+}
+#btn-mas:checked~ .btn-mas .icon-mas2{
+    transform: rotate(137deg);
+    font-size: 25px;
+}
+</style>
